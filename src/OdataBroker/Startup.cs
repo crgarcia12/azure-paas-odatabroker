@@ -15,7 +15,7 @@ using Microsoft.OData.Edm;
 using ODataV3.Data;
 using ODataV3.Models;
 
-namespace OdataV5
+namespace OdataBroker
 {
     public class Startup
     {

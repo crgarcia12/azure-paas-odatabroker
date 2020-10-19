@@ -13,7 +13,7 @@
     {
 
         private readonly string Endpoint = "https://crgar-odata-cosmos.documents.azure.com:443/";
-        private readonly string Key = "IvS8x4XPpjfKf9SjAFdkGf5tyR9OHTUwlJuLQd90Hnxw3MnBT9OIdsBq2WKBLnhye92P796JPTkjnUx4l5VGJQ==";
+        private readonly string Key = "";
         private readonly string DatabaseId = "ToDoList";
         private readonly string CollectionId = "Personas";
 

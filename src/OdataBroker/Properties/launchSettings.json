@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OdataV5": {
+    "OdataBroker": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
