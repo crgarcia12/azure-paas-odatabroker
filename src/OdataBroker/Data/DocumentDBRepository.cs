@@ -11,12 +11,10 @@
 
     public class DocumentDBRepository<T> : IDocumentDBRepository<T> where T : class
     {
-
         private readonly string Endpoint = "https://crgar-odata-cosmos.documents.azure.com:443/";
-        private readonly string Key = "";
+        private readonly string Key = "<key>";
         private readonly string DatabaseId = "ToDoList";
-        private readonly string CollectionId = "Personas";
-
+        private readonly string CollectionId = typeof(T).Name;
         private DocumentClient client;
 
         public DocumentDBRepository()

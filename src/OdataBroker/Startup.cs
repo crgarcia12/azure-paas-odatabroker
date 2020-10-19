@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OData.Edm;
+using OdataBroker.Models;
 using ODataV3.Data;
 using ODataV3.Models;
 
@@ -32,6 +33,7 @@ namespace OdataBroker
             services.AddControllers();
             services.AddOData();
             services.AddSingleton<IDocumentDBRepository<Persona>>(new DocumentDBRepository<Persona>());
+            services.AddSingleton<IDocumentDBRepository<InsurancePolicy>>(new DocumentDBRepository<InsurancePolicy>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +59,8 @@ namespace OdataBroker
         private IEdmModel GetEdmModel()
         {
             var odataBuilder = new ODataConventionModelBuilder();
-            odataBuilder.EntitySet<Persona>("Personas");
+            odataBuilder.EntitySet<Persona>("Persona");
+            odataBuilder.EntitySet<InsurancePolicy>("InsurancePolicy");
 
             return odataBuilder.GetEdmModel();
         }
